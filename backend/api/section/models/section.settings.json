@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sections",
+  "info": {
+    "name": "section"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    },
+    "name": {
+      "type": "string"
+    },
+    "classes": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "unique": false
+    },
+    "questions": {
+      "collection": "question"
+    },
+    "pages": {
+      "collection": "page",
+      "via": "sections",
+      "dominant": true
+    }
+  }
+}

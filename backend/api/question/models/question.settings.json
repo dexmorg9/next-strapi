@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "name": "question"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "multiple",
+        "textarea",
+        "simple",
+        "radio",
+        "label"
+      ]
+    },
+    "secondary": {
+      "type": "string"
+    },
+    "required": {
+      "type": "boolean",
+      "default": false
+    },
+    "order": {
+      "type": "integer"
+    },
+    "classes": {
+      "type": "string"
+    },
+    "options": {
+      "collection": "option",
+      "via": "questions",
+      "dominant": true
+    }
+  }
+}
